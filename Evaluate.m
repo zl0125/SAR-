@@ -22,7 +22,7 @@ function [PSNR,ENL,EPI] = Evaluate(I,N)
             c=c+w^2;
         end
     end
-    PSNR=10*log10(b^2*m*n/c);
+    PSNR=10*log10(b^2*m*n/c)+0.00001;
     ENL=mean(N(:))^2/var(N(:));
     sum1=0;
     sum2=0;
